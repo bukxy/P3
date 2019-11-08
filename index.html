@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<title>Loca'Vélo</title>
+</head>
+
+<body>
+    
+    <div id="site">
+    
+        <header>
+            <h1>Loca'<span>Vélo</span></h1>
+            <div id='bike'><i class="fa fa-bicycle fa-3x" aria-hidden="true"></i></div>
+        </header>
+
+        <section id="sectionSlider">
+            <div id="controls">
+                    <h2>Diaporama explicatif</h2>
+                    <div id="back"><i class="fa fa-arrow-left fa-2x" id="left-arrow" aria-hidden="true"></i></div>
+                    <div id="next"><i class="fa fa-arrow-right fa-2x" id="right-arrow" aria-hidden="true"></i></div>
+            </div>
+            <div id="slider">
+                <ul>
+                    <li><img src="images/marker.png" alt="Cliquez sur un marqueur pour afficher les détails de la station"></li>
+                    <li><img src="images/details.png" alt="Si une place et un vélo sont disponnibles, vous pourrez signer pour réserver"></li>
+                    <li><img src="images/canvas.png" alt="Après signature appuyer sur réserver"></li>
+                    <li><img src="images/recap.png" alt="Vous trouverez en bas de la page un récapitulatif avec le nom de la station et le temps restant avant l'expiration de votre réservation"></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <div id="infoBlockMapForm">
+                <h2>Carte des stands de vélos et leurs détails</h2>
+            </div>
+            <div id="divPreinfo">
+                <p>Cliquez sur un marqueur pour afficher les détails de la station.</p>
+            </div>
+
+            <div id="container">
+                <div id="carte"></div>
+                <div class="toggleMenu">
+                    <div id="blockMenu"></div>
+                    <i class="fa fa-angle-double-left fa-3x" aria-hidden="true" id="openMenu"></i>
+                    <i class="fa fa-angle-double-right fa-3x" aria-hidden="true" id
+                       ="closeMenu"></i>
+                </div>
+
+                <div id="infos">
+                    <h2>Détails de la station</h2>
+                    <div id='sousH2Infos'></div>
+                    <div id="canvasDiv">
+                        <canvas id="canvas"></canvas>
+                        <div id="boutonsCanvas">
+                            <button id="clearCanvas">Effacer</button>
+                            <button id="booking" title="Vous devez signez avant de pouvoir réserver">Réserver</button>
+                        </div>
+                    </div>
+                    <button id="newBooking" title="Attention une nouvelle réservation annulera la précédente !">Nouvelle Réseration</button>
+                </div>
+            </div>
+
+            <div id="expirationInfos">
+                <div id="recap">
+                    <h2>Récapitulatif de la réservation en cours</h2>
+                </div>
+                <div id="result"></div>
+                <button id="cancelBooking">Annuler la réservation</button>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© Loca'Vélo</p>
+        </footer>
+        
+    </div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/markerclusterer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAExjje58eNltDAJSeIdxE2KbUoZUHaMy4"></script>
+	
+	<script src="js/map.js"></script>
+	<script src="js/reservation.js"></script>
+	<script src="js/canvas.js"></script>
+	
+	<script src="js/slider.js"></script>
+	<script src="js/global.js"></script>
+    
+</body>
+    
+</html>
